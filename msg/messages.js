@@ -33,6 +33,13 @@ goog.provide('Blockly.Msg.en');
 
 goog.require('Blockly.Msg');
 
+// AI blocks
+Blockly.Msg.CATEGORY_AI = 'AI';
+Blockly.Msg.AI_ASK = 'ask AI %1';
+Blockly.Msg.AI_ANSWER = 'AI answer';
+Blockly.Msg.AI_TRANSLATE = 'translate %1 to %2';
+Blockly.Msg.AI_ISREADY = 'is AI response ready?';
+
 // Control blocks
 Blockly.Msg.CONTROL_FOREVER = 'forever';
 Blockly.Msg.CONTROL_REPEAT = 'repeat %1';
