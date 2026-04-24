@@ -293,6 +293,7 @@ Blockly.Msg.SOUND_VOLUME = 'volume';
 Blockly.Msg.SOUND_RECORD = 'record...';
 
 // Category labels
+Blockly.Msg.CATEGORY_AI = 'AI';
 Blockly.Msg.CATEGORY_MOTION = 'Motion';
 Blockly.Msg.CATEGORY_LOOKS = 'Looks';
 Blockly.Msg.CATEGORY_SOUND = 'Sound';
