@@ -577,50 +577,23 @@ def exclude_horizontal(item):
   return not item.endswith("block_render_svg_horizontal.js")
 
 if __name__ == "__main__":
-  try:
-    closure_dir = CLOSURE_DIR_NPM
-    closure_root = CLOSURE_ROOT_NPM
-    closure_library = CLOSURE_LIBRARY_NPM
-    closure_compiler = CLOSURE_COMPILER_NPM
+  # Skip local compiler check and use remote compiler directly
+  closure_env = {
+    "closure_dir": CLOSURE_DIR_NPM,
+    "closure_root": CLOSURE_ROOT_NPM,
+    "closure_library": CLOSURE_LIBRARY_NPM,
+    "closure_compiler": REMOTE_COMPILER,
+  }
 
-    # Load calcdeps from the local library
-    calcdeps = import_path(os.path.join(
-        closure_root, closure_library, "closure", "bin", "calcdeps.py"))
-
-    # Sanity check the local compiler
-    test_args = [closure_compiler, os.path.join("build", "test_input.js")]
-    test_proc = subprocess.Popen(test_args, stdin=subprocess.PIPE, stdout=subprocess.PIPE)
-    (stdout, _) = test_proc.communicate()
-    assert stdout.decode("utf-8") == read(os.path.join("build", "test_expect.js"))
-
-    print("Using local compiler: %s ...\n" % CLOSURE_COMPILER_NPM)
-  except (ImportError, AssertionError):
-    if os.path.isdir(os.path.join(os.path.pardir, "closure-library-read-only")):
-      # Dir got renamed when Closure moved from Google Code to GitHub in 2014.
-      print("Error: Closure directory needs to be renamed from"
-            "'closure-library-read-only' to 'closure-library'.\n"
-            "Please rename this directory.")
-    elif os.path.isdir(os.path.join(os.path.pardir, "google-closure-library")):
-      print("Error: Closure directory needs to be renamed from"
-            "'google-closure-library' to 'closure-library'.\n"
-            "Please rename this directory.")
-    else:
-      print("""Error: Closure not found. Usually this means 'npm ci' failed. Try running it again? More resources:
-  developers.google.com/blockly/guides/modify/web/closure""")
-      sys.exit(1)
+  # Load calcdeps from the local library
+  calcdeps = import_path(os.path.join(
+      CLOSURE_ROOT_NPM, CLOSURE_LIBRARY_NPM, "closure", "bin", "calcdeps.py"))
 
   search_paths = list(calcdeps.ExpandDirectories(
-      ["core", os.path.join(closure_root, closure_library)]))
+      ["core", os.path.join(CLOSURE_ROOT_NPM, CLOSURE_LIBRARY_NPM)]))
 
   search_paths_horizontal = list(filter(exclude_vertical, search_paths))
   search_paths_vertical = list(filter(exclude_horizontal, search_paths))
-
-  closure_env = {
-    "closure_dir": closure_dir,
-    "closure_root": closure_root,
-    "closure_library": closure_library,
-    "closure_compiler": closure_compiler,
-  }
 
   # Run all tasks in parallel threads.
   # Uncompressed is limited by processor speed.
