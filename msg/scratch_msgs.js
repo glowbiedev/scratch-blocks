@@ -5403,6 +5403,7 @@ Blockly.ScratchMsgs.locales["en"] =
     "SOUND_SETVOLUMETO": "set volume to %1%",
     "SOUND_VOLUME": "volume",
     "SOUND_RECORD": "record...",
+    "CATEGORY_AI": "AI",
     "CATEGORY_MOTION": "Motion",
     "CATEGORY_LOOKS": "Looks",
     "CATEGORY_SOUND": "Sound",

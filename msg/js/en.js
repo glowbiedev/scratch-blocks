@@ -234,6 +234,7 @@ Blockly.Msg["SOUND_SETVOLUMETO"] = "set volume to %1%";
 Blockly.Msg["SOUND_VOLUME"] = "volume";
 Blockly.Msg["SOUND_RECORD"] = "record...";
 Blockly.Msg["CATEGORY_MOTION"] = "Motion";
+Blockly.Msg["CATEGORY_AI"] = "AI";
 Blockly.Msg["CATEGORY_LOOKS"] = "Looks";
 Blockly.Msg["CATEGORY_SOUND"] = "Sound";
 Blockly.Msg["CATEGORY_EVENTS"] = "Events";
