@@ -64,3 +64,19 @@ Blockly.Blocks['ai_isready'] = {
     });
   }
 };
+
+Blockly.Blocks['tts'] = {
+  init: function() {
+    this.jsonInit({
+      "message0": Blockly.Msg.TTS,
+      "args0": [
+        {
+          "type": "input_value",
+          "name": "TEXT"
+        }
+      ],
+      "category": Blockly.Categories.ai,
+      "extensions": ["colours_ai", "shape_statement"]
+    });
+  }
+};

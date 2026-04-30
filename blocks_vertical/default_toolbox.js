@@ -172,6 +172,13 @@ Blockly.Blocks.defaultToolbox = '<xml id="toolbox-categories" style="display: no
       '</value>' +
     '</block>' +
     '<block type="ai_isready" id="ai_isready"></block>' +
+    '<block type="tts" id="tts">' +
+      '<value name="TEXT">' +
+        '<shadow type="text">' +
+          '<field name="TEXT">Hello!</field>' +
+        '</shadow>' +
+      '</value>' +
+    '</block>' +
   '</category>' +
   '<category name="%{BKY_CATEGORY_LOOKS}" id="looks" colour="#9966FF" secondaryColour="#774DCB">' +
     '<block type="looks_show" id="looks_show"></block>' +
