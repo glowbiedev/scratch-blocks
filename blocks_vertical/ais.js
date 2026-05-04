@@ -19,7 +19,7 @@ Blockly.Blocks['ai_ask'] = {
         }
       ],
       "category": Blockly.Categories.ai,
-      "extensions": ["colours_ai", "output_string"]
+      "extensions": ["colours_ai", "shape_statement"]
     });
   }
 };
