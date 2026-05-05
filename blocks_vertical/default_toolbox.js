@@ -171,6 +171,7 @@ Blockly.Blocks.defaultToolbox = '<xml id="toolbox-categories" style="display: no
         '</shadow>' +
       '</value>' +
     '</block>' +
+    '<block type="ai_translation" id="ai_translation"></block>' +
     '<block type="ai_isready" id="ai_isready"></block>' +
     '<block type="tts" id="tts">' +
       '<value name="TEXT">' +

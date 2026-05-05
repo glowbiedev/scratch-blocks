@@ -55,6 +55,17 @@ Blockly.Blocks['ai_translate'] = {
   }
 };
 
+Blockly.Blocks['ai_translation'] = {
+  init: function() {
+    this.jsonInit({
+      "message0": Blockly.Msg.AI_TRANSLATION,
+      "category": Blockly.Categories.ai,
+      "checkboxInFlyout": true,
+      "extensions": ["colours_ai", "output_string"]
+    });
+  }
+};
+
 Blockly.Blocks['ai_isready'] = {
   init: function() {
     this.jsonInit({
