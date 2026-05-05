@@ -38,6 +38,7 @@ Blockly.Msg.CATEGORY_AI = 'AI';
 Blockly.Msg.AI_ASK = 'ask AI %1';
 Blockly.Msg.AI_ANSWER = 'AI answer';
 Blockly.Msg.AI_TRANSLATE = 'translate %1 to %2';
+Blockly.Msg.AI_TRANSLATION = 'translation result';
 Blockly.Msg.AI_ISREADY = 'is AI response ready?';
 Blockly.Msg.TTS = 'speak %1';
 
