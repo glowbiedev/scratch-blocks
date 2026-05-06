@@ -97,8 +97,8 @@ Blockly.Blocks['tts'] = {
           "type": "field_dropdown",
           "name": "VOICE",
           "options": [
-            ["Female", "female"],
-            ["Male", "male"]
+            ["Female", "Chirp3-HD-Aoede"],
+            ["Male", "Chirp3-HD-Enceladus"]
           ]
         }
       ],
