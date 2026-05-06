@@ -92,14 +92,6 @@ Blockly.Blocks['tts'] = {
             ["English", "en"],
             ["Indonesian", "id"]
           ]
-        },
-        {
-          "type": "field_dropdown",
-          "name": "VOICE",
-          "options": [
-            ["Female", "female"],
-            ["Male", "male"]
-          ]
         }
       ],
       "category": Blockly.Categories.ai,
