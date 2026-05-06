@@ -79,7 +79,7 @@ Blockly.Blocks['ai_isready'] = {
 Blockly.Blocks['tts'] = {
   init: function() {
     this.jsonInit({
-      "message0": Blockly.Msg.TTS,
+      "message0": "speak %1 language %2 voice %3",
       "args0": [
         {
           "type": "input_value",
@@ -91,6 +91,14 @@ Blockly.Blocks['tts'] = {
           "options": [
             ["English", "en"],
             ["Indonesian", "id"]
+          ]
+        },
+        {
+          "type": "field_dropdown",
+          "name": "VOICE",
+          "options": [
+            ["Female", "female"],
+            ["Male", "male"]
           ]
         }
       ],
