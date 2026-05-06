@@ -90,7 +90,8 @@ Blockly.Blocks['tts'] = {
           "name": "LANGUAGE",
           "options": [
             ["English", "en"],
-            ["Indonesian", "id"]
+            ["Bahasa", "id"]
+            ["Tagalog", "ph"]
           ]
         },
         {
