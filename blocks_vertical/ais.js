@@ -8,7 +8,7 @@ goog.require('Blockly.constants');
 goog.require('Blockly.ScratchBlocks.VerticalExtensions');
 
 
-Blockly.Blocks['ai_ask'] = {
+Blockly.Blocks['ai_askAI'] = {
   init: function() {
     this.jsonInit({
       "message0": Blockly.Msg.AI_ASK,
@@ -24,7 +24,7 @@ Blockly.Blocks['ai_ask'] = {
   }
 };
 
-Blockly.Blocks['ai_answer'] = {
+Blockly.Blocks['ai_getAnswer'] = {
   init: function() {
     this.jsonInit({
       "message0": Blockly.Msg.AI_ANSWER,
@@ -55,7 +55,7 @@ Blockly.Blocks['ai_translate'] = {
   }
 };
 
-Blockly.Blocks['ai_translation'] = {
+Blockly.Blocks['ai_getTranslation'] = {
   init: function() {
     this.jsonInit({
       "message0": Blockly.Msg.AI_TRANSLATION,
@@ -66,7 +66,7 @@ Blockly.Blocks['ai_translation'] = {
   }
 };
 
-Blockly.Blocks['ai_isready'] = {
+Blockly.Blocks['ai_isReady'] = {
   init: function() {
     this.jsonInit({
       "message0": Blockly.Msg.AI_ISREADY,
@@ -76,7 +76,7 @@ Blockly.Blocks['ai_isready'] = {
   }
 };
 
-Blockly.Blocks['tts'] = {
+Blockly.Blocks['ai_speak'] = {
   init: function() {
     this.jsonInit({
       "message0": "speak %1 language %2 voice %3",

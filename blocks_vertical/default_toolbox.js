@@ -151,14 +151,14 @@ Blockly.Blocks.defaultToolbox = '<xml id="toolbox-categories" style="display: no
   '</category>' +
   '</category>' +
   '<category name="%{BKY_CATEGORY_AI}" id="ai" colour="#FF8C75" secondaryColour="#E66E55">' +
-    '<block type="ai_ask" id="ai_ask">' +
+    '<block type="ai_askAI" id="ai_askAI">' +
       '<value name="PROMPT">' +
         '<shadow type="text">' +
           '<field name="TEXT">Hello!</field>' +
         '</shadow>' +
       '</value>' +
     '</block>' +
-    '<block type="ai_answer" id="ai_answer"></block>' +
+    '<block type="ai_getAnswer" id="ai_getAnswer"></block>' +
     '<block type="ai_translate" id="ai_translate">' +
       '<value name="TEXT">' +
         '<shadow type="text">' +
@@ -171,9 +171,9 @@ Blockly.Blocks.defaultToolbox = '<xml id="toolbox-categories" style="display: no
         '</shadow>' +
       '</value>' +
     '</block>' +
-    '<block type="ai_translation" id="ai_translation"></block>' +
-    '<block type="ai_isready" id="ai_isready"></block>' +
-    '<block type="tts" id="tts">' +
+    '<block type="ai_getTranslation" id="ai_getTranslation"></block>' +
+    '<block type="ai_isReady" id="ai_isReady"></block>' +
+    '<block type="ai_sepak" id="ai_speak">' +
       '<value name="TEXT">' +
         '<shadow type="text">' +
           '<field name="TEXT">Hello!</field>' +
